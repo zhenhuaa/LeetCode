@@ -1,7 +1,7 @@
 # @param {Integer[]} nums
 # @return {String[]}
 def summary_ranges(nums)
-  return nil if nums.empty?
+  return [] if nums.empty?
   ranges = [[nums.first, nums.first]]
 
   nums.each do |num|
