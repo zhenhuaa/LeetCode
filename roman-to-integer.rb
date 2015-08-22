@@ -7,11 +7,8 @@ def roman_to_int(s)
   pre_char_num = 0
   while index >= 0
     char_num = roman_char_to_int[s[index]]
-    if char_num >= pre_char_num
-      sum += char_num
-    else
-      sum -= char_num
-    end
+    op = char_num < pre_char_num ? :- : :+
+    sum = op.to_proc.(sum, char_num)
     pre_char_num = char_num
     index -= 1
   end
