@@ -19,7 +19,6 @@ def is_valid(s)
         stack.pop
       end
     end
-    p stack
 
     i += 1
   end
